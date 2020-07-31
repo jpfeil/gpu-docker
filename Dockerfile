@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
+FROM nvcr.io/nvidia/tensorflow:20.07-tf2-py3
 
 RUN apt-get update --fix-missing
 
@@ -10,8 +10,6 @@ RUN apt-get install -y wget \
 		       python3-dev \
 		       python3-pip \
 		       python3-venv 
-
-RUN pip3 install tensorflow-gpu
 
 WORKDIR /opt
 
